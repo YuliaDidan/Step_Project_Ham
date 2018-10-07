@@ -1,0 +1,40 @@
+.nav__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;    
+}
+
+.nav__item {
+    
+    &:not(:first-child) {
+        margin-left: 22px;
+    }
+
+    &.active .nav__link {
+        color: $accent-color;
+    }
+    &:hover .nav__link {
+        color: $accent-color;
+        border-bottom: solid 3px $accent-color;
+    }
+}
+
+.nav__link {
+    color: $text-white;
+    text-transform: uppercase; 
+    font-weight: 700;
+    transition: color .2s ease-in-out;
+    @include rem(13);
+    padding-bottom: 50px;
+
+    &:hover {
+        text-decoration: none;
+       
+
+        // &:hover:after {
+
+        // }
+    }
+}
+

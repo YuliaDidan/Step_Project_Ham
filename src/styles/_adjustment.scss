@@ -1,0 +1,20 @@
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html {
+    font-size: $root-font + px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;  
+}
+
+.maincontent {
+    flex: 1 0;
+  }
+

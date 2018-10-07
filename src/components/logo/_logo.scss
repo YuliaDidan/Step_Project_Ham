@@ -1,0 +1,17 @@
+.logo {
+    width: 197px;
+    height: 67px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  
+  .logo__link {
+    display: block;   
+  }
+  
+  .logo__img {
+    display: block;
+    max-width: 100%;
+  }
