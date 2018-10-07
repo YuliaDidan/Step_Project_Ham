@@ -1,4 +1,4 @@
-# beetroot-sass-template
+# sass-template
 
 Run project 
 
