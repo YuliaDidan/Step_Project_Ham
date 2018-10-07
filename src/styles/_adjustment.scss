@@ -26,6 +26,27 @@ body {
     cursor: pointer;
 }
 
+.btn {
+    background-color: transparent;
+    border-radius: 4px;
+    color: $text-white;
+    text-transform: uppercase;
+    @include rem(13);
+    font-weight: 700;
+    transition: color .1s ease-in-out;
+    line-height: 31px;
+    text-align: center;
+    padding: 15px 25px;
+    min-width: 166px;
+}
+
+
+
+.btn-green {
+    background-color: $accent-color;
+}
+
+
 
 
 

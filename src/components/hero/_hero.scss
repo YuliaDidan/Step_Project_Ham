@@ -3,6 +3,7 @@
     // height: 100vh;
     @include background('../img/hero.png');
     padding-top: 366px;
+    padding-bottom: 244px;
     // display: flex;    
     // align-items: center;
     // flex: 1 0;   
@@ -38,4 +39,37 @@
     font-weight: 300;
     line-height: 74px;
     margin-bottom: 146px;
+}
+
+.btn-wl-green {
+    border-top: solid 4px $text-white;
+    &:hover {
+        border-top: solid 4px $accent-color;
+    }
+}
+
+.btn-wl-blue {
+    border-top: solid 4px $text-white;
+    &:hover {
+        border-top: solid 4px #00cbf6;
+    }
+}
+
+.hero__btn-green {
+
+    &:hover {
+        background-color: $text-white;
+        color: $accent-color;        
+    }
+
+}
+
+.hero__btn-blue {
+    background-color: #00cbf6;
+    margin-left: 28px;
+    &:hover {
+        background-color: $text-white;
+        color: #00cbf6;        
+    }
+
 }
