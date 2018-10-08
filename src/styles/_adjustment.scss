@@ -33,18 +33,45 @@ body {
     text-transform: uppercase;
     @include rem(13);
     font-weight: 700;
-    transition: color .1s ease-in-out;
+    transition: color .2s ease-in-out;
     line-height: 31px;
     text-align: center;
     padding: 15px 25px;
     min-width: 166px;
 }
 
-
-
 .btn-green {
-    background-color: $accent-color;
+    background-color: $accent-color; 
+    &:hover {
+        background-color: $text-white;
+        color: $accent-color;        
+    }
 }
+
+.btn-blue {
+    background-color: #00cbf6;
+    margin-left: 28px;
+    &:hover {
+        background-color: $text-white;
+        color: #00cbf6;        
+    }
+
+}
+
+.btn-wl-green {
+    border-top: solid 4px $text-white;
+    &:hover {
+        border-top: solid 4px $accent-color;
+    }
+}
+
+.btn-wl-blue {
+    border-top: solid 4px $text-white;
+    &:hover {
+        border-top: solid 4px #00cbf6;
+    }
+}
+
 
 
 
