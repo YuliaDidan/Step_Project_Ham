@@ -36,7 +36,7 @@ body {
     transition: color .2s ease-in-out;
     line-height: 31px;
     text-align: center;
-    padding: 15px 25px;
+    padding: 15px 0px;
     min-width: 166px;
 }
 
@@ -72,6 +72,15 @@ body {
     }
 }
 
+.btn-green-border:hover {
+    border: solid 2px $accent-color;
+}
+
+ .fa-plus {
+    display: inline-block;
+    margin-right: 16px;
+} 
+
 .overlay {
     position: relative;
   
@@ -86,15 +95,20 @@ body {
     }
   }
 
-  .block__title {    
+  .section__title {    
     @include rem(36);
     font-weight: 400;
     line-height: 40px;
+    margin-bottom: 37px;
   }
 
-  .block__title-grey {
+  .section__title-grey {
     color:  $title-grey;
   }
+
+  .green_lines_img-wrap{
+    margin-bottom: 70px;
+}
 
 
 

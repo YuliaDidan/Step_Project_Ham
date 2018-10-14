@@ -1,0 +1,125 @@
+.works {
+    background-color: $bg-light;
+    padding: 100px 0;
+}
+
+.works__menu {
+    width: 60%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    margin-bottom: 71px;    
+}
+
+.works__menu-item {    
+    flex-grow: 6;
+    text-align: center;
+    border-right: solid 1px #ececec;
+    border-top:  solid 1px #ececec;
+    border-bottom: solid 1px #ececec;
+    background-color: $text-white;    
+}
+
+.works__menu-item:first-child {
+    border-left: solid 1px #ececec;
+}
+
+
+.works__menu-item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 8px 0;
+    color: $sub-title-grey; 
+    @include rem(14);  
+    font-weight: 400; 
+    line-height: 42px;
+    transition: color .2s ease-in-out;
+}
+
+.works__menu-item-link:hover {
+    text-decoration: none;
+    color: $accent-color;
+} 
+
+.works__menu-item-link--active {
+    color: $accent-color;
+    border-top: solid 2px $accent-color;
+}
+
+.works__gallery {
+    margin-bottom: 71px;
+}
+
+.works__item {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;        
+}
+
+.works__item:hover {
+    text-decoration: none;
+}
+
+.works__item--first {
+    border-top: solid 3px $accent-color;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 40px;
+}
+
+.works__item-icon-block {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.works__item-title {
+    display: block;
+    color: $accent-color;
+    @include rem(14);
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+
+.works__item-sub-title {
+    display: block;
+    margin-bottom: 13px;
+    color: #8a8a8a;
+    @include rem(13);
+    font-weight: 300;
+}
+
+.chain_icon,
+.search_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+.chain_icon {
+    color: $accent-color;
+    border: solid 1px $accent-color;
+    margin-right: 5px;
+}   
+
+.search_icon {
+    background-color: $accent-color;
+    color: $text-white; 
+}
+
+.works__img {
+    width: 100%;
+    height: 100%;
+}
