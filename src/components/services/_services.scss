@@ -3,7 +3,7 @@
     padding-bottom: 105px;
 }
 
-.services__title {
+.services--title {
     margin-bottom: 37px;
 }
 
@@ -24,7 +24,7 @@
     width: 16.7%;
     height: 124px;    
     text-align: center;
-    background-color: $light-background;
+    background-color: $bg-light;
     border: solid 1px #ececec;    
     transition: color .2s ease-in-out;
     

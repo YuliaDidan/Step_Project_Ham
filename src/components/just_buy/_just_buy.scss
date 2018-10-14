@@ -1,0 +1,26 @@
+.just_buy {
+    @include background('../img/just_buy.png');
+    padding: 126px 0;  
+    background-color: $bg-black; 
+}
+
+.just_buy__text-block {
+    z-index: 9;
+}
+
+.just_buy__title {
+    @include rem(40);
+    color: $accent-color;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase; 
+    margin-bottom: 35px;
+}
+
+.just_buy__paragraph {
+    color: #d8d8d8;
+    @include rem(16);
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 106px;
+}

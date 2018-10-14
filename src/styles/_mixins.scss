@@ -4,6 +4,6 @@
 
   @mixin background($url) {
     background: center center no-repeat/cover;
-    background-image: url($url);
+    background-image: url($url);    
   }
   
