@@ -1,0 +1,59 @@
+.news {
+    background-color: $text-white;
+    padding: 84px 0 86px;
+}
+
+.news__crads-wrap {
+    margin-bottom: 45px;
+}
+
+.card {
+    position: relative;
+}
+
+.card__date-block {
+    position: absolute;
+    background-color:  #203e38;
+    width: 68px;
+    height: 66px;
+    right: 0px;
+    @include rem(16);
+    color: $text-white;
+    font-weight: 400;
+    line-height: 26px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__date-block--active {
+    background-color: $accent-color;
+}
+
+.card-subtitle {
+    color: $sub-title-grey;
+    @include rem(18);
+    font-weight: 700;    
+}
+
+.card-subtitle--active {
+    color: $accent-color;
+}
+
+.card-body {
+    background-color: $bg-light;
+}
+
+.card-link {
+    text-decoration: none;
+    color: $text-grey;
+    @include rem(14);
+    font-weight: 300;
+    // margin-left:    
+}
+
+.card-link:nth-child(3) {
+    border-left: solid 1px $text-grey;
+    padding-left: 21px;
+}
