@@ -6,11 +6,14 @@
     padding: 0;
 }
 
+.option {
+    padding: 80px 0 95px 0;
+    text-align: center;
+}
+
 .option__block-green {
     background-color: $accent-color;
-    border-top: solid 7px $text-white;    
-    padding: 88px 0 100px 0;    
-    text-align: center;
+    border-top: solid 7px $text-white;   
     transition: color 0.2s ease-in-out;    
 }
 
@@ -21,10 +24,8 @@
 
 .option__block-black{
     background-color: #1c2a33;
-    border-top: solid 7px $accent-color;    
-    padding: 88px 0 100px 0;    
-    text-align: center;
-
+    border-top: solid 7px $accent-color;   
+    
         & .option__icon,
         .option__description {
         color: $accent-color;
@@ -46,6 +47,12 @@
     color: $accent-color;
     
 } 
+
+.option__link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
 
 .option__link:hover {
     text-decoration: none; 
