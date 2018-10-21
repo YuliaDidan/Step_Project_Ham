@@ -95,6 +95,12 @@ body {
     }
   }
 
+  .overlay-grey {
+      &:after {
+        background: rgba(46, 74, 91, 0.5);
+      }
+  }
+
   .section__title {    
     @include rem(36);
     font-weight: 400;
@@ -104,6 +110,10 @@ body {
 
   .section__title-grey {
     color:  $title-grey;
+  }
+
+  .section__title-white {
+      color: $text-white;
   }
 
   .green_lines_img-wrap{
