@@ -101,6 +101,12 @@ body {
       }
   }
 
+  .overlay-dark-grey {
+    &:after {
+      background: rgba(59, 51, 56, 0.5);
+    }
+}
+
   .section__title {    
     @include rem(36);
     font-weight: 400;

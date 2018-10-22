@@ -16,7 +16,7 @@
     background-color:  #203e38;
     width: 68px;
     height: 66px;
-    right: 0px;
+    right: 0;
     @include rem(16);
     color: $text-white;
     font-weight: 400;
@@ -49,8 +49,7 @@
     text-decoration: none;
     color: $text-grey;
     @include rem(14);
-    font-weight: 300;
-    // margin-left:    
+    font-weight: 300;       
 }
 
 .card-link:nth-child(3) {
