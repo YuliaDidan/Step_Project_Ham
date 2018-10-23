@@ -1,0 +1,30 @@
+footer {
+    padding: 47px 0 47px;
+    background-color: #22353f;
+}
+
+.copyright,
+.reserved {
+    color: #aeaeae;
+    @include rem(14);
+    font-weight: 300;
+    // line-height: 24px;
+}
+
+.copyright {
+    padding-right: 2px;
+    border-right: solid 1px #aeaeae;
+}
+
+.reserved {
+    padding-left: 6px;
+}
+
+.copyright__link {
+    color: $accent-color;
+}
+
+.copyright__link:hover {
+    text-decoration: none;
+    color: $accent-color;
+}
