@@ -14,16 +14,16 @@
 .services__item {
     position: relative;
     width: 16.7%;
-    padding: 16px 0;    
+    height: 73px;
+    // padding: 16px 0;    
     text-align: center;
     background-color: $bg-light;
-    border-top: solid 1px #ececec; 
-    border-bottom: solid 1px #ececec;
-    border-right:  solid 1px #ececec; 
+    border: solid 1px #ececec;     
     transition: color .2s ease-in-out;
     
         &:hover {
-        background-color: $accent-color;
+        // background-color: $accent-color;
+        border: solid 1px $accent-color;        
     }
 }
 
@@ -47,21 +47,14 @@
 .services__item--active {
     background-color: $accent-color;
 
-    &::after {
-        content: '';
-        position: absolute;    
-        background: url(../img/rectangle.png);
-        width: 24px;
-        height: 13px;
-        bottom: -12px;
-        left: 0;
-        right: 0;
-        margin: auto;
+    &::after {      
         display: block; 
     }
 }
 
 .services__link {
+    // position: relative;
+    // z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,8 +68,13 @@
 
     &:hover {
         text-decoration: none;
+        color: $sub-title-grey;
+    }
+
+    &:active {
         color: $text-white;
     }
+
 }
 
 .services__link--active {
@@ -100,6 +98,28 @@
     color: #777777;
     line-height: 25px;
     margin-bottom: 0;
+    text-align: left;
 }
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {    
+    background: $accent-color;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
