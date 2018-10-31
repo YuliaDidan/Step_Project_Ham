@@ -3,9 +3,11 @@
 
 // import "jquery-ui";
 
-$( "#tabs" ).tabs();
+// $( "#tabs" ).tabs();
 
-$( "#tabs2" ).tabs();
+
+
+// $( "#tabs2" ).tabs();
 
 
 

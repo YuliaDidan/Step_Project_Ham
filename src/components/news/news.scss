@@ -1,6 +1,6 @@
 .news {
     background-color: $text-white;
-    padding: 84px 0 86px;
+    padding: 84px 0 110px;
 }
 
 .news__crads-wrap {
@@ -34,7 +34,8 @@
 .card-subtitle {
     color: $sub-title-grey;
     @include rem(18);
-    font-weight: 700;    
+    font-weight: 700; 
+    margin-bottom: 10px !important;   
 }
 
 .card-subtitle--active {
@@ -52,7 +53,21 @@
     font-weight: 300;       
 }
 
+.card-link+.card-link {
+    margin-left: 10px;
+}
+
 .card-link:nth-child(3) {
     border-left: solid 1px $text-grey;
-    padding-left: 21px;
+    padding-left: 16px;
+}
+
+.card__img-link {
+    width: 100%;
+    height: 100%;
+}
+
+.card__img-top {
+    width: 100%;
+    height: 100%;
 }

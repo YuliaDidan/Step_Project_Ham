@@ -1,6 +1,6 @@
 .just_buy {
     @include background('../img/just_buy.png');
-    padding: 126px 0;  
+    padding: 122px 0 126px;  
     background-color: $bg-black; 
 }
 
@@ -14,7 +14,7 @@
     font-weight: 700;
     line-height: 40px;
     text-transform: uppercase; 
-    margin-bottom: 35px;
+    margin-bottom: 17px;
 }
 
 .just_buy__paragraph {
@@ -22,5 +22,5 @@
     @include rem(16);
     font-weight: 400;
     line-height: 40px;
-    margin-bottom: 106px;
+    margin-bottom: 64px;
 }

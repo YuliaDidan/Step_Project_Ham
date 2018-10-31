@@ -1,7 +1,11 @@
+*, :before, :after {
+    box-sizing: border-box !important;
+  }
+
 html,
 body {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100vh;  
 }
 
 html {
@@ -12,6 +16,11 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;  
+}
+
+container {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
 }
 
 .maincontent {
@@ -26,7 +35,7 @@ body {
     cursor: pointer;
 }
 
-.btn {
+.btn {    
     background-color: transparent;
     border-radius: 4px;
     color: $text-white;
@@ -36,12 +45,13 @@ body {
     transition: color .2s ease-in-out;
     line-height: 31px;
     text-align: center;
-    padding: 15px 0px;
+    padding: 14px 0px;
     min-width: 166px;
 }
 
 .btn-green {
     background-color: $accent-color; 
+    
     &:hover {
         background-color: $text-white;
         color: $accent-color;        
@@ -72,8 +82,12 @@ body {
     }
 }
 
-.btn-green-border:hover {
-    border: solid 2px $accent-color;
+.btn-green-border {
+    border: solid 2px transparent; 
+    
+    &:hover {
+        border-color: $accent-color;
+    }
 }
 
  .fa-plus {
@@ -111,7 +125,7 @@ body {
     @include rem(36);
     font-weight: 400;
     line-height: 40px;
-    margin-bottom: 37px;
+    margin-bottom: 21px;
   }
 
   .section__title-grey {
@@ -123,7 +137,13 @@ body {
   }
 
   .green_lines_img-wrap{
-    margin-bottom: 70px;
+    margin-bottom: 64px;
+    display: inline-block;
+    width: 76px;
+    height: 5px;
+    transform: skew(73deg);
+    border-top: solid 1px $accent-color;
+    border-bottom: solid 1px $accent-color;
 }
 
 
