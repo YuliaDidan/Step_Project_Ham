@@ -1,4 +1,5 @@
 .works {
+    position: relative;
     background-color: $bg-light;
     padding: 76px 0 97px;    
 }
@@ -44,21 +45,19 @@
     font-weight: 400; 
     line-height: 42px;
     transition: color .2s ease-in-out;
+
+    &:hover {
+        text-decoration: none;
+        color: $accent-color;
+    } 
 }
 
-.works__menu-item-link:hover {
-    text-decoration: none;
-    color: $accent-color;
-} 
-
-.works__menu-item-link--active {
+.works__menu-item-link--selected {
     color: $accent-color;
     border-top: solid 2px $accent-color;
 }
 
-.works__gallery {
-    margin-bottom: 71px;
-}
+
 
 .works__item-link {
     width: 100%;
@@ -102,6 +101,18 @@
     font-weight: 300;
 }
 
+.works__gallery {
+    margin-bottom: 71px;    
+}
+
+.works__img-container {
+    position: relative;
+    font-size: 0;
+    // display: flex;
+    // flex-wrap: wrap;
+}
+
+
 .chain_icon,
 .search_icon {
     display: flex;
@@ -126,30 +137,83 @@
 }
 
 .works__img {
+    cursor: pointer;
+    width: 100%;    
+    // height: 100%;
+}
+ 
+.holder {
+    position: absolute;
+    left: 0;
+    top: 110px;
+    bottom: 0;
+    right: 0;
+    width: 85%;
+    height: 53%;
+    background: rgba(46,74,91,.5);
+    margin: auto;
+    display: none;
+  }
+  
+  .preloader {
+    /* size */
+    width: $size + px;
+    height: $size + px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: rotatePreloader $time + s infinite ease-in;
+  }
+  @keyframes rotatePreloader {
+    0% {
+    transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+    }
+    100% {
+    transform: translateX(-50%) translateY(-50%) rotateZ(-360deg);
+    }
+  }
+  .preloader div {
+    position: absolute;
     width: 100%;
     height: 100%;
-}
-
-// .ui-state-active,
-// .ui-widget-content .ui-state-active,
-// .ui-widget-header .ui-state-active,
-// a.ui-button:active,
-// .ui-button:active,
-// .ui-button.ui-state-active:hover {
-//     border-top: 2px solid $accent-color !important;
-//     // border-bottom: none;
-//     // border-right: none;
-//     // border-left: none;
-//     background: $text-white !important;
-//     color: $accent-color;
-// }
-
-// .ui-state-default a,
-// .ui-state-default a:link,
-// .ui-state-default a:visited,
-// a.ui-button,
-// a:link.ui-button,
-// a:visited.ui-button,
-// .ui-button {
-//     color: #8a8a8a;
-// }
+    opacity: 0;
+  }
+  .preloader div:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    width: 10%;
+    height: 10%;
+    background-color: $accent-color;
+    transform: translateX(-50%);
+    border-radius: 50%;
+  }
+  
+  @for $i from 1 through $count {
+    .preloader div:nth-child(#{$i}) {
+      transform: rotateZ(((360 / $count) * ($i - 1)) + deg);
+      animation: rotateCircle + $i $time + s infinite linear;
+      z-index: $count - $i;
+    }
+    @keyframes rotateCircle#{$i} {
+      #{percentage(((50 / $count) * ($i - 1)) / 100)} {
+        opacity: 0;
+      }
+      #{percentage((((50 / $count) + 0.0001) * ($i - 1)) / 100)} {
+        opacity: 1;
+        transform: rotateZ((0 - ((360 / $count) * ($i - 2))) + deg);
+      }
+      #{percentage((((50 / $count) * ($i - 0)) + 2) / 100)} {
+        transform: rotateZ((0 - ((360 / $count) * ($i - 1))) + deg);
+      }
+      #{percentage(((50 + ((50 / $count) * ($i - 0))) + 2) / 100)} {
+        transform: rotateZ((0 - ((360 / $count) * ($i - 1))) + deg);
+      }
+      100% {
+        transform: rotateZ((0 - ((360 / $count) * ($count - 1))) + deg);
+        opacity: 1;
+      }
+    }
+  }
