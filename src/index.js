@@ -77,56 +77,16 @@ $(".works__menu-item-link:eq(0)").click();
 
 let worksBtn = $(`.works__btn`);
 
- function goLoader () {    
-    let loader = $(`.holder`)
-    // console.log(loader.length);
-    loader.show(4000, function() {        
-        // loader.css(`display`, `none`);
-        loader.hide();
-    });
-}
-
-// function addImages(itemSize=12) {
-//     let arrayElements = [];
-//     for (let i=0; i<itemSize; i++){
-//         // let elem = $(`<img src="./img/works/graphic_design/gd${i+1}.jpg" alt="picture" class="works__img">`);
-//         let elem = $(`<img>`);
-//         elem.attr('src', `./img/works/graphic_design/gd${i+1}.jpg`);
-//         elem.attr(`alt`, `images${i +1}`);
-//         arrayElements.push(elem);        
-//     }
-//     $(`.works__img-container`).appendChild(arrayElements);
-// }
-
 let itemSize=12;
 let maxGalleryLength = 36;
 let count = 0;
 
-// function addImages() {   
-//     let arrayElements = [];
-//     for (let i=0; i<itemSize; i++){
-//         // let elem = $(`<img src="./img/works/graphic_design/gd${count%itemSize}.jpg" alt="picture" class="works__img">`);
-//         let elem = $(`<img>`);
-//         elem.attr('src', `https://picsum.photos/200/300/?image=${count*3}`)
-//         .attr(`alt`, `images${count + 1}`)
-//         .addClass(`works__img`)
-//         .wrap(`<div class="col-3"></div>`)
-//         .parent()
-//         // .addClass(`col-3`)
-//         .on(`click`, imageClick);
-//         arrayElements.push(elem); 
-//         count++;       
-//     }  
-//     if(count === maxGalleryLength){
-//         worksBtn.hide();
-//     }
-//     $(`.works__img-container`).append(arrayElements);
-// }
-
-function addImages() {   
+function addImages() {    
     let arrayElements = [];
     for (let i=0; i<itemSize; i++){
-        let elem = $(`<div class="col-3"><img src="https://picsum.photos/200/200/?image=${count*3}" alt="picture" class="works__img"></div>`);
+        let elem = $(`<div class="col-3"><img src="https://picsum.photos/200/?image=${count*2}" alt="picture" class="works__img"></div>`);
+        // let imageNum = Math.floor((Math.random() * 12) + 1);
+        // let elem = $(`<img src="./img/works/graphic_design/gd${imageNum}.jpg" alt="picture" class="works__img">`);
         // let elem = $(`<img>`);
         // elem.attr('src', `https://picsum.photos/200/300/?image=${count*3}`)
         // .attr(`alt`, `images${count + 1}`)
@@ -142,22 +102,24 @@ function addImages() {
         worksBtn.hide();
     }
     $(`.works__img-container`).append(arrayElements);
-}
 
-function imageClick() {    
-    $(this).attr(`alt`);
-    // console.log($(this).attr(`alt`));
-    // $(`previewImage`).fadeOut(1000);   
-    let clonedImage =  $(this).clone(); 
-    console.log(clonedImage.length);   
+    }
+
+
+function imageClick() { 
+    $(`previewImage`).fadeOut(1000);   
+    let clonedImage =  $(this).clone();       
     clonedImage.addClass(`previewImage`)
-    .css(`position`, `absolute`)
-    .css(`top`, `30%`)
-    .css(`left`, `40%`)
-    // .css(`margin`, `auto`)
-    .css(`width`, `100px`);
-    // .css(`height`, `100px`);
-    clonedImage.hide();
+    .css({
+        'position': 'absolute',   
+        'top': '33.3%',
+        // 'bottom': '33%',
+        'left': '0',
+        'right': '0',
+        'margin': 'auto',
+        'width': '150%'
+    }); 
+    clonedImage.hide();   
     clonedImage.on(`click`, hideImage);
     $(`.works__img-container`).append(clonedImage);
     clonedImage.fadeIn(3000);
@@ -167,16 +129,18 @@ function hideImage() {
     $(this).fadeOut(1000);
 }
 
+function goLoader() {    
+    let loader = $(`.holder`)     
+    loader.fadeIn(5000, function() {   
+        loader.fadeOut();
+    });    
+}
+
+function addImagesDelay() {
+    goLoader();
+    window.setTimeout(addImages, 5000);
+}
+
 addImages();
 
-
-// let worksBtn = $(`.works__btn`);
-
-// console.log( worksBtn.length);
-
-worksBtn.on(`click`, addImages);
-
-
-
-
-
+worksBtn.on(`click`, addImagesDelay);
