@@ -1,4 +1,6 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/slick-carousel/slick/slick.scss";
+@import "../node_modules/slick-carousel/slick/slick-theme.scss";
 
 @import "styles/vars";
 @import "styles/mixins";
@@ -14,7 +16,7 @@
 @import "components/just_buy/just_buy";
 @import "components/works/works";
 @import "components/news/news.scss";
-@import "components/carusel/carusel.scss";
+@import "components/testimonials/testimonials.scss";
 @import "components/gallery/gallery.scss";
 @import "components/footer/footer.scss";
 
