@@ -103,8 +103,7 @@ $(document).ready(function() {
                 count++;                      
             }  
             if(count === maxGalleryLength){
-                worksBtn.hide();
-                console.log(maxGalleryLength.length);
+                worksBtn.hide();                
             }
 
             $(`.works__gallery--all`).append(arrayElements);
@@ -151,8 +150,7 @@ $(document).ready(function() {
 
     $(function(){
 
-    function addImagesfromFolder(itemSize, container, folderName, fileName) {        
-        // let maxGalleryLength = 12;
+    function addImagesfromFolder(itemSize, container, folderName, fileName, maxGalleryLength, btn) {        
         let count = 0;    
         let arrayElements = [];             
         for (let i=0; i<itemSize; i++){
@@ -161,9 +159,9 @@ $(document).ready(function() {
             arrayElements.push(elem); 
             count++;       
         }  
-        // if(count === maxGalleryLength){
-        //     worksBtn.hide();
-        // }
+        if(count === maxGalleryLength){
+            $(btn).hide();
+        }
         $(container).append(arrayElements);       
         
     }
@@ -174,6 +172,45 @@ $(document).ready(function() {
     addImagesfromFolder( 10, `.works__gallery--wordpress`, `wordpress`, `wordpress`);  
     
 })
+
+
+
+$(function(){
+    let btn = $(`.gallery__btn`);
+    let maxGalleryLength = 28;
+    let count = 0; 
+    let itemSize = 14; 
+    function addImagesfromFolderGallery() {  
+        let arrayElements = [];                   
+        for (let i=0; i<itemSize; i++){
+            let elem = $(`<div class="card gallery__card"><img src="./img/gallery/best_images/${count+1}.png" alt="picture" class="works__img"></div>`);
+            // elem.on(`click`, imageClick);
+            arrayElements.push(elem); 
+            count++;
+            console.log(count);            
+        }             
+        if(count === maxGalleryLength){
+            btn.hide();
+            console.log(btn.length);
+        }
+
+        $(`.gallery__set2`).append(arrayElements);       
+    }
+        function goLoader() {    
+        let loader = $(`.holder`)     
+        loader.fadeIn(5000, function() {   
+            loader.fadeOut();
+        });    
+    }
+    
+        function addImagesDelay() {
+        goLoader();
+        window.setTimeout(addImagesfromFolderGallery, 5000);
+    }
+    
+        btn.on(`click`, addImagesDelay);
+})
+
 
 
 let testimonials = $('.testimonials__slider-list');
@@ -200,7 +237,4 @@ let testimonials = $('.testimonials__slider-list');
         nextArrow: $('.testimonials__slider-btn--next')        
       });
     }
-
-
-
 })
