@@ -18,13 +18,17 @@ body {
     font-family: 'Montserrat', sans-serif;  
 }
 
-container {
+.container {
     padding-right: 0px !important;
     padding-left: 0px !important;
 }
 
 .maincontent {
     flex: 1 0;
+  }
+
+  button:focus {
+    outline: none;
   }
 
 .btn-reset {
@@ -47,6 +51,10 @@ container {
     text-align: center;
     padding: 14px 0px;
     min-width: 166px;
+
+    &:focus {
+      box-shadow: none;
+    }
 }
 
 .btn-green {

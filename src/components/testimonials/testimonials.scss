@@ -17,8 +17,7 @@
   .testimonials__slider-item {
     text-align: center;
     color: $text-white;
-    position: relative;
-    // padding-top: 65px;
+    position: relative;    
   }
   
   .testimonials__slider-quote {
@@ -93,16 +92,14 @@
   position: relative;
   z-index: 99;
   width: 400px;
-  margin: 50px auto 0 auto; 
-  // border: solid 1px red;  
+  margin: 50px auto 0 auto;   
 }
 
 .testimonials__slider-nav-list {
   padding: 0;  
   width: 400px; 
   display: flex;
-  justify-content: center; 
-  // border: solid 1px yellow;
+  justify-content: center;   
 }
 
 .testimonials__slider-nav img {
@@ -127,8 +124,7 @@
   background: none;
   padding: 0;
   width: 31px;
-  height: 31px;
-  // border: none;
+  height: 31px;  
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
